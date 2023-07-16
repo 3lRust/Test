@@ -4,7 +4,7 @@
     <div v-if="display" class="zone-display">
       <div>
         <!--Actualizado para agregar el campo ded fecha de actualizacion-->
-        Zone Name: <strong>{{ name }}</strong> Distributions: {{ distributionDisplay }} 
+        Zone Name: <strong>{{ name }}</strong> Distributions: {{ distributionDisplay }} <br>
         (Updated at: {{ form.updated_at }})
       </div>
       <button class="btn btn-primary" @click="setDisplay(false)" :disabled="saving">
@@ -44,7 +44,7 @@
           Add
         </button>
 
-        <button class="btn btn-danger" @click="removeDistribution" :disabled="saving">
+        <button class="btn btn-remover" @click="removeDistribution" :disabled="saving">
           Remove
         </button>
       </div>
@@ -334,5 +334,11 @@ export default {
       gap: $small-action-space;
     }
   }
+
+  .btn-remover {
+    /* Estilos específicos para el botón "remover" */
+    background-color: #ff8000; /* Naranja */
+    color: #efeeee;
+}
 }
 </style>
