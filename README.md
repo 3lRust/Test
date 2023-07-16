@@ -46,11 +46,13 @@ npm run watch
 
 Run the command to create the migrations
 ```
+python manage.py makemigrations
 
 ```
 
 Run the command to apply the migrations
 ```
+python manage.py migrate
 
 ```
 
